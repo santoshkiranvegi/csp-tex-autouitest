@@ -1,0 +1,45 @@
+<story path="stories/POLARIS_regression/TC8759_Create Property - Proceed button Pos.story" title="TC8759_Create Property - Proceed button Pos">
+<meta>
+<property keyword="@" name="UAT" value=""/>
+<property keyword="@" name="application" value="POLARIS"/>
+<property keyword="@" name="name" value="TC8759_Create Property - Proceed button Pos"/>
+<property keyword="@" name="project" value="POLARIS"/>
+<property keyword="@" name="regression" value=""/>
+</meta>
+<lifecycle keyword="Lifecycle:">
+<before keyword="Before:">
+<scope keyword="Scope:" value="SCENARIO">
+<step>Given LoadTestData UC62_Create Single Property Tests_01.xlsx</step>
+</scope>
+</before>
+<after keyword="After:">
+<scope keyword="Scope:" value="SCENARIO">
+<outcome keyword="Outcome:" value="ANY">
+<step>Given CloseTestData</step>
+</outcome>
+</scope>
+</after>
+</lifecycle>
+<scenario keyword="Scenario:" title="Scenario 1 To Create Property - Proceed button Pos">
+<examples keyword="Examples:">
+<step>Given ELRS_Login &lt;LOGINSHEETNAME&gt; and &lt;LOGINROW&gt;</step>
+<step>Then ELRS_Navigate &lt;CreateProperty&gt;</step>
+<step>And CreateProperty_Proceed &lt;CREATEPROPERTYSHEETNAME&gt; and &lt;CREATEPROPERTYROW&gt;</step>
+<step>And PropertyDetail_Cancel</step>
+<step>And ELRS_Logout</step>
+<parameters>
+<names><name>LOGINSHEETNAME</name><name>LOGINROW</name><name>CREATEPROPERTYSHEETNAME</name><name>CREATEPROPERTYROW</name><name>CreateProperty</name></names>
+<values><value>LoginInfo</value><value>1</value><value>CreateProperty</value><value>9</value><value>CreateProperty</value></values>
+</parameters>
+
+<example keyword="Example:">{LOGINSHEETNAME=LoginInfo, LOGINROW=1, CREATEPROPERTYSHEETNAME=CreateProperty, CREATEPROPERTYROW=9, CreateProperty=CreateProperty, UAT=, application=POLARIS, name=TC8759_Create Property - Proceed button Pos, project=POLARIS, regression=}</example>
+<step outcome="successful">Given LoadTestData <parameter>UC62_Create Single Property Tests_01.xlsx</parameter></step>
+<step outcome="successful">Given ELRS_Login <parameter>LoginInfo</parameter> and <parameter>1</parameter></step>
+<step outcome="successful">Then ELRS_Navigate <parameter>CreateProperty</parameter></step>
+<step outcome="successful">And CreateProperty_Proceed <parameter>CreateProperty</parameter> and <parameter>9</parameter></step>
+<step outcome="successful">And PropertyDetail_Cancel</step>
+<step outcome="successful">And ELRS_Logout</step>
+<step outcome="successful">Given CloseTestData</step>
+</examples>
+</scenario>
+</story>

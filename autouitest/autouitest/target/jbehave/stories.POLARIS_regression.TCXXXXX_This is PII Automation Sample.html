@@ -1,0 +1,72 @@
+<div class="story">
+<h1>TCXXXXX_This is PII Automation Sample</h1>
+<div class="path">stories/POLARIS_regression/TCXXXXX_This is PII Automation Sample.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@UAT </div>
+<div class="property">@application POLARIS</div>
+<div class="property">@name TCXXXXX_This is PII Automation Sample</div>
+<div class="property">@project POLARIS</div>
+<div class="property">@regression </div>
+</div>
+<div class="lifecycle"><h2>Lifecycle:</h2>
+<div class="before"><h3>Before:</h3>
+<div class="scope"><h3>Scope: SCENARIO</h3>
+<div class="step">Given LoadTestData POC_PII_Sample.xlsx</div>
+</div>
+</div>
+<div class="after"><h3>After:</h3>
+<div class="scope"><h3>Scope: SCENARIO</h3>
+<div class="outcome"><h3>Outcome: ANY</h3>
+<div class="step">Given CloseTestData</div>
+</div>
+</div>
+</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario 1 To Create Property - Proceed button Pos</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given ELRS_Login &lt;LOGINSHEETNAME&gt; and &lt;LOGINROW&gt;</div>
+<div class="step">Then ELRS_Navigate &lt;CreateProperty&gt;</div>
+<div class="step">And CreateProperty_Proceed &lt;CREATEPROPERTYSHEETNAME&gt; and &lt;CREATEPROPERTYROW&gt;</div>
+<div class="step">And Service_CopyColumn CreateProperty,Block,1 and PropertyDetail_Map,Block,1</div>
+<div class="step">And PropertyDetail_Proceed PropertyDetail_Map and 1</div>
+<div class="step">And PrintParcel_ProceedToConfirmation &lt;PRINTPARCELSHEETNAME&gt; and &lt;PRINTPARCELROWNAME&gt;</div>
+<div class="step">And ParcelConfirmation_Certify Create CreateProperty 1</div>
+<div class="step">And PropertyMapMaintenanceRequest_Close</div>
+<div class="step">And Service_CopyColumn CreateProperty,Block,1 and Register,TargetBlock,1</div>
+<div class="step">And Service_CopyColumn CreateProperty,PIN,1 and Register,TargetPINFrom,1</div>
+<div class="step">And ELRS_Navigate Register</div>
+<div class="step">And Register_PreSubmission_Submit Register and 1</div>
+<div class="step">And ELRS_Logout</div>
+<table>
+<thead>
+<tr>
+<th>LOGINSHEETNAME</th><th>LOGINROW</th><th>CREATEPROPERTYSHEETNAME</th><th>CREATEPROPERTYROW</th><th>CreateProperty</th><th>SOURCE</th><th>TARGET</th><th>PRINTPARCELSHEETNAME</th><th>PRINTPARCELROWNAME</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>LoginInfo</td><td>1</td><td>CreateProperty</td><td>1</td><td>CreateProperty</td><td>CreateProperty,Block,1</td><td>PropertyDetail_Map,Block,1</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {LOGINSHEETNAME=LoginInfo, LOGINROW=1, CREATEPROPERTYSHEETNAME=CreateProperty, CREATEPROPERTYROW=1, CreateProperty=CreateProperty, SOURCE=CreateProperty,Block,1, TARGET=PropertyDetail_Map,Block,1, PRINTPARCELSHEETNAME=, PRINTPARCELROWNAME=, UAT=, application=POLARIS, name=TCXXXXX_This is PII Automation Sample, project=POLARIS, regression=}</h3>
+<div class="step successful">Given LoadTestData <span class="step parameter">POC_PII_Sample.xlsx</span></div>
+<div class="step successful">Given ELRS_Login <span class="step parameter">LoginInfo</span> and <span class="step parameter">1</span></div>
+<div class="step successful">Then ELRS_Navigate <span class="step parameter">CreateProperty</span></div>
+<div class="step successful">And CreateProperty_Proceed <span class="step parameter">CreateProperty</span> and <span class="step parameter">1</span></div>
+<div class="step successful">And Service_CopyColumn <span class="step parameter">CreateProperty,Block,1</span> and <span class="step parameter">PropertyDetail_Map,Block,1</span></div>
+<div class="step successful">And PropertyDetail_Proceed <span class="step parameter">PropertyDetail_Map</span> and <span class="step parameter">1</span></div>
+<div class="step successful">And PrintParcel_ProceedToConfirmation <span class="step parameter"></span> and <span class="step parameter"></span></div>
+<div class="step successful">And ParcelConfirmation_Certify <span class="step parameter">Create</span> <span class="step parameter">CreateProperty</span> <span class="step parameter">1</span></div>
+<div class="step successful">And PropertyMapMaintenanceRequest_Close</div>
+<div class="step successful">And Service_CopyColumn <span class="step parameter">CreateProperty,Block,1</span> and <span class="step parameter">Register,TargetBlock,1</span></div>
+<div class="step successful">And Service_CopyColumn <span class="step parameter">CreateProperty,PIN,1</span> and <span class="step parameter">Register,TargetPINFrom,1</span></div>
+<div class="step successful">And ELRS_Navigate <span class="step parameter">Register</span></div>
+<div class="step successful">And Register_PreSubmission_Submit <span class="step parameter">Register</span> and <span class="step parameter">1</span></div>
+<div class="step successful">And ELRS_Logout</div>
+<div class="step successful">Given CloseTestData</div>
+</div>
+</div>
+</div>

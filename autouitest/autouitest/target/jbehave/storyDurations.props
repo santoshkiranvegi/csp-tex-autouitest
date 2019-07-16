@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Wed May 08 15:34:09 IST 2019
+threads=1
+total=104000
+stories/POLARIS_regression/TCXXXXX_This\ is\ PII\ Automation\ Sample.story=104000
+threadAverage=104000

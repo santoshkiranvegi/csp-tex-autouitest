@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>stories.POLARIS_regression.TC8759_Create Property - Proceed button Pos</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>TC8759_Create Property - Proceed button Pos</h1>
+<div class="path">stories/POLARIS_regression/TC8759_Create Property - Proceed button Pos.story</div>
+<div class="meta">
+<div class="keyword">Meta:</div>
+<div class="property">@UAT </div>
+<div class="property">@application POLARIS</div>
+<div class="property">@name TC8759_Create Property - Proceed button Pos</div>
+<div class="property">@project POLARIS</div>
+<div class="property">@regression </div>
+</div>
+<div class="lifecycle"><h2>Lifecycle:</h2>
+<div class="before"><h3>Before:</h3>
+<div class="scope"><h3>Scope: SCENARIO</h3>
+<div class="step">Given LoadTestData UC62_Create Single Property Tests_01.xlsx</div>
+</div>
+</div>
+<div class="after"><h3>After:</h3>
+<div class="scope"><h3>Scope: SCENARIO</h3>
+<div class="outcome"><h3>Outcome: ANY</h3>
+<div class="step">Given CloseTestData</div>
+</div>
+</div>
+</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Scenario 1 To Create Property - Proceed button Pos</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given ELRS_Login &lt;LOGINSHEETNAME&gt; and &lt;LOGINROW&gt;</div>
+<div class="step">Then ELRS_Navigate &lt;CreateProperty&gt;</div>
+<div class="step">And CreateProperty_Proceed &lt;CREATEPROPERTYSHEETNAME&gt; and &lt;CREATEPROPERTYROW&gt;</div>
+<div class="step">And PropertyDetail_Cancel</div>
+<div class="step">And ELRS_Logout</div>
+<table>
+<thead>
+<tr>
+<th>LOGINSHEETNAME</th><th>LOGINROW</th><th>CREATEPROPERTYSHEETNAME</th><th>CREATEPROPERTYROW</th><th>CreateProperty</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>LoginInfo</td><td>1</td><td>CreateProperty</td><td>9</td><td>CreateProperty</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {LOGINSHEETNAME=LoginInfo, LOGINROW=1, CREATEPROPERTYSHEETNAME=CreateProperty, CREATEPROPERTYROW=9, CreateProperty=CreateProperty, UAT=, application=POLARIS, name=TC8759_Create Property - Proceed button Pos, project=POLARIS, regression=}</h3>
+<div class="step successful">Given LoadTestData <span class="step parameter">UC62_Create Single Property Tests_01.xlsx</span></div>
+<div class="step successful">Given ELRS_Login <span class="step parameter">LoginInfo</span> and <span class="step parameter">1</span></div>
+<div class="step successful">Then ELRS_Navigate <span class="step parameter">CreateProperty</span></div>
+<div class="step successful">And CreateProperty_Proceed <span class="step parameter">CreateProperty</span> and <span class="step parameter">9</span></div>
+<div class="step successful">And PropertyDetail_Cancel</div>
+<div class="step successful">And ELRS_Logout</div>
+<div class="step successful">Given CloseTestData</div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
